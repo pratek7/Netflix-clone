@@ -7,8 +7,7 @@ import { auth } from "./firebase";
 import { useDispatch, useSelector } from "react-redux";
 import { login, loggout, selectUser } from "./features/userSlice";
 import ProfileScreen from "./screens/ProfileScreen";
-import Nav from "./Nav";
-import AboutScreen from "./screens/AboutScreen";
+
 // import PaymentSuccessScreen from "./screens/canceled";
 // import PaymentFailScreen from "./screens/success";
 
@@ -49,10 +48,7 @@ function App() {
             <Route path="/profile">
               <ProfileScreen />
             </Route>
-            <Route exact path="/about">
-              <Nav />
-              <AboutScreen />
-            </Route>
+
             <Route exact path="/">
               <HomeScreen />
             </Route>

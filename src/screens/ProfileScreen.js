@@ -1,21 +1,12 @@
 import React from "react";
-import axios from "axios";
+import { useSelector } from "react-redux";
+import { selectUser } from "../features/userSlice";
 import { auth } from "../firebase";
 import Nav from "../Nav";
 import PlansScreen from "./PlansScreen";
 import "./ProfileScreen.css";
-import { loadStripe } from "@stripe/stripe-js"; // stripe plugin
-const stripPromise = loadStripe(process.env.stripe_public_key);
 const ProfileScreen = () => {
-  const createCheckout = async () => {
-    const stripe = await stripPromise;
-    const checkoutSession = await axios.post("/api/create-checkout-session", {
-      email: user.email,
-    });
-    //redirect to payment info
-    const result = await stripe.redirectToCheckout();
-    if (result.error) alert(result.error.message);
-  };
+  const user = useSelector(selectUser);
   return (
     <div className="profileScreen">
       <Nav />
@@ -28,6 +19,7 @@ const ProfileScreen = () => {
             <div className="profileScreen__plans">
               <h3>Plans</h3>
               <PlansScreen />
+              <button action="/create-checkout-session" method="POST"></button>
               <button
                 onClick={() => auth.signOut()}
                 className="profileScreen__signOut"

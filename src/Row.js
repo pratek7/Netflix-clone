@@ -37,7 +37,7 @@ function Row({ title, fetchUrl, isLarge = false }) {
                   {Array(Math.floor(movie.vote_average / 2))
                     .fill()
                     .map((_, i) => (
-                      <StarRateIcon style={{ color: "cyan" }} key={i} />
+                      <StarRateIcon style={{ color: "red" }} key={i} />
                     ))}
                 </span>
               </div>

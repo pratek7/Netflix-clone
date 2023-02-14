@@ -25,7 +25,20 @@ const PlansScreen = () => {
       });
   }, []);
   console.log(products);
-  return <div className="plansScreen"></div>;
+  return (
+    <div className="plansScreen">
+      <div className="screen-suscription">
+        <p>Small Screen 720P</p>
+        <p>500</p>
+
+        <p>Small Screen 1080P</p>
+        <p>1000</p>
+
+        <p>Small Screen 4K</p>
+        <p>1500</p>
+      </div>
+    </div>
+  );
 };
 
 export default PlansScreen;

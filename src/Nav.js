@@ -12,6 +12,7 @@ function Nav() {
           onClick={() => history.push("/")}
           className="nav-logo"
           src={"/netflixlogo.png"}
+          alt="img"
         />
         <img
           onClick={() => history.push("/profile")}

@@ -36,7 +36,7 @@ const SignUpScreen = () => {
   return (
     <div className="signupScreen">
       <form>
-        <h1>Sign In</h1>
+        <h1>Sign In or Register</h1>
         <input ref={emailRef} type="email" placeholder="Email" />
         <input ref={passwordRef} type="password" placeholder="Password" />
         <button onClick={signIn} type="submit">
@@ -46,7 +46,7 @@ const SignUpScreen = () => {
         <h4>
           <span className="signupScreen__gray">New to Netflix?</span>{" "}
           <span className="signupScreen__link" onClick={register}>
-            Sign Up now.
+            register.
           </span>
         </h4>
       </form>

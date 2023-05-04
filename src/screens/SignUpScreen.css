@@ -39,6 +39,11 @@
   cursor: pointer;
   margin-top: 20px;
 }
+.signupScreen__link {
+  border-radius: 3px;
+  background: red;
+  padding: 8px;
+}
 .signupScreen__link:hover {
   cursor: pointer;
   text-decoration: underline;

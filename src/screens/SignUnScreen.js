@@ -40,7 +40,7 @@ const SignUpScreen = () => {
         <input ref={emailRef} type="email" placeholder="Email" />
         <input ref={passwordRef} type="password" placeholder="Password" />
         <button onClick={signIn} type="submit">
-          Sign In
+          Log In
         </button>
 
         <h4>

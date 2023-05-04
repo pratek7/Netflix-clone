@@ -41,10 +41,13 @@
 }
 .signupScreen__link {
   border-radius: 3px;
-  background: red;
-  padding: 8px;
+  color: #000;
+  background: #fff;
+  border: 2px solid #fff;
+  padding: 10px;
 }
 .signupScreen__link:hover {
   cursor: pointer;
-  text-decoration: underline;
+  background-color: #000;
+  color: #fff;
 }
